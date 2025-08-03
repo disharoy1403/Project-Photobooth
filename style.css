@@ -3,11 +3,13 @@
 
 *,
 *::before,
-*::after {
+*::after
+{
   box-sizing: border-box;
 }
 
-body {
+body 
+{
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
   margin: 0;
@@ -16,7 +18,8 @@ body {
 }
 
 
-header {
+header 
+{
   background-color: rgba(255, 255, 255, 0.05);
   padding: 20px 40px;
   display: flex;
@@ -26,7 +29,8 @@ header {
   backdrop-filter: blur(6px);
 }
 
-.logo {
+.logo 
+{
   font-size: 2rem;
   font-weight: 600;
   color: #ffffff;
@@ -34,7 +38,8 @@ header {
 }
 
 
-.nav-button {
+.nav-button
+{
   text-decoration: none;
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
@@ -45,31 +50,36 @@ header {
   transition: all 0.3s ease;
 }
 
-.nav-button:hover {
+.nav-button:hover 
+{
   background: linear-gradient(to right, #5e35b1, #1a73e8);
   transform: scale(1.05);
 }
 
 
-.hero {
+.hero 
+{
   text-align: center;
   padding: 120px 20px;
   background: none;
 }
 
-.hero h1 {
+.hero h1 
+{
   font-size: 48px;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-.hero p {
+.hero p 
+{
   font-size: 20px;
   color: #e0e0e0;
   margin-bottom: 40px;
 }
 
-.primary-button {
+.primary-button 
+{
   text-decoration: none;
   background: linear-gradient(to right, #ff512f, #dd2476);
   color: white;
@@ -80,13 +90,15 @@ header {
   transition: all 0.3s ease;
 }
 
-.primary-button:hover {
+.primary-button:hover 
+{
   background: linear-gradient(to right, #ff6a00, #ee0979);
   transform: translateY(-2px);
 }
 
 
-.form-container {
+.form-container 
+{
   max-width: 400px;
   background-color: rgba(255, 255, 255, 0.1);
   margin: 80px auto;
@@ -97,18 +109,21 @@ header {
   color: #fff;
 }
 
-.form-container h2 {
+.form-container h2 
+{
   text-align: center;
   margin-bottom: 20px;
 }
 
-form label {
+form label 
+{
   display: block;
   margin-top: 15px;
   font-weight: 600;
 }
 
-form input {
+form input 
+{
   width: 100%;
   padding: 12px;
   margin-top: 8px;
@@ -119,11 +134,13 @@ form input {
   font-size: 16px;
 }
 
-form input::placeholder {
+form input::placeholder 
+{
   color: #ccc;
 }
 
 form input:focus {
   outline: 2px solid #1a73e8;
   background-color: rgba(255, 255, 255, 0.2);
+
 }
