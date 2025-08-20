@@ -4,8 +4,8 @@ This project is a basic example of a simple **Welcome Page** that links to a **L
 
 ## 🌐 Demo Preview
 
-- 🖼️ **Welcome Page**: Displays a friendly welcome message and a link to login.
-- 🔐 **Login Page**: Contains a simple login form (username & password).
+-  **Welcome Page**: Displays a friendly welcome message and a link to login.
+-  **Login Page**: Contains a simple login form (username & password).
 -  **Sign-up Page**: Contains a Sign up form (username & password).
 
 ---
