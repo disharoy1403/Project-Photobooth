@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - SnapBooth</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="form-box">
+    <h1>Login</h1>
+
+    <form id="loginForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" required><br>
+      <small id="passError" style="color: red; display: none;">Password must be at least 8 characters.</small><br><br>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="sign-up.html">Sign up here</a></p>
+  </div>
+
+  <script>
+    let passwordField = document.getElementById("password");
+    let passError = document.getElementById("passError");
+
+    // live check password length
+    passwordField.addEventListener("input", function() {
+      if (passwordField.value.length < 8) {
+        passError.style.display = "inline";
+      } else {
+        passError.style.display = "none";
+      }
+    });
+
+    // final check on form submit
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      if (passwordField.value.length < 8) {
+        alert("Password must be at least 8 characters long.");
+      } else {
+        let name = document.getElementById("name").value;
+        // store name in localStorage
+        localStorage.setItem("username", name);
+        // redirect to landing page
+       window.location.href = "landing.html";
+      }
+    });
+  </script>
+
+</body>
+</html>

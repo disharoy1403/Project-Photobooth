@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing - SnapBooth</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+  <header>
+    <h2>SnapBooth</h2>
+    <div class="user-info" id="userInfo">
+      <!-- Filled by JS -->
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to SnapBooth 🎉</h1>
+  </main>
+
+  <script>
+    // get stored name
+    let name = localStorage.getItem("username");
+    let userInfo = document.getElementById("userInfo");
+
+    if (name) {
+      userInfo.innerHTML = "Welcome, " + name + "! <a id='logout'>Logout</a>";
+    } else {
+      // if no name, redirect back to login
+      window.location.href = "login.html";
+    }
+
+    // logout functionality
+    document.addEventListener("click", function(e) {
+      if (e.target && e.target.id === "logout") {
+        localStorage.removeItem("username");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+
+</body>
+</html>
